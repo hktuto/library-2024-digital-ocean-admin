@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "half_an_hours",
+  "info": {
+    "singularName": "half-an-hour",
+    "pluralName": "half-an-hours",
+    "displayName": "Half_an_Hour",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name_HK": {
+      "type": "text"
+    },
+    "Name_EN": {
+      "type": "string"
+    },
+    "Description_HK": {
+      "type": "text"
+    },
+    "Description_EN": {
+      "type": "text"
+    },
+    "Location_HK": {
+      "type": "text"
+    },
+    "Location_EN": {
+      "type": "string"
+    },
+    "Address_HK": {
+      "type": "text"
+    },
+    "Address_EN": {
+      "type": "text"
+    },
+    "Host_HK": {
+      "type": "text"
+    },
+    "Host_EN": {
+      "type": "text"
+    },
+    "district": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::district.district"
+    },
+    "DisplayTime_HK": {
+      "type": "string"
+    },
+    "DisplayTime_EN": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Library",
+        "Council",
+        "School"
+      ]
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "StartTime": {
+      "type": "time"
+    },
+    "EndTime": {
+      "type": "time"
+    }
+  }
+}
