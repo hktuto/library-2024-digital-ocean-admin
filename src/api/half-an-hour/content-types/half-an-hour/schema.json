@@ -58,7 +58,8 @@
       "enum": [
         "Library",
         "Council",
-        "School"
+        "School",
+        "Other"
       ]
     },
     "StartDate": {
