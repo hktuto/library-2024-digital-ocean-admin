@@ -984,7 +984,9 @@ export interface ApiHalfAnHourHalfAnHour extends Schema.CollectionType {
     >;
     DisplayTime_HK: Attribute.String;
     DisplayTime_EN: Attribute.String;
-    Category: Attribute.Enumeration<['Library', 'Council', 'School', 'Other']>;
+    Category: Attribute.Enumeration<
+      ['Library', 'Council', 'School', 'Other', 'Leisure and Cultural Venue']
+    >;
     StartDate: Attribute.Date;
     EndDate: Attribute.Date;
     StartTime: Attribute.Time;
