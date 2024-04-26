@@ -1084,6 +1084,39 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiPopupPopup extends Schema.SingleType {
+  collectionName: 'popups';
+  info: {
+    singularName: 'popup';
+    pluralName: 'popups';
+    displayName: 'popup';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_HK: Attribute.Text;
+    title_EN: Attribute.Text;
+    content_HK: Attribute.RichText;
+    content_EN: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::popup.popup',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::popup.popup',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1110,6 +1143,7 @@ declare module '@strapi/types' {
       'api::home.home': ApiHomeHome;
       'api::menu.menu': ApiMenuMenu;
       'api::page.page': ApiPagePage;
+      'api::popup.popup': ApiPopupPopup;
     }
   }
 }
