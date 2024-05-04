@@ -991,6 +991,7 @@ export interface ApiHalfAnHourHalfAnHour extends Schema.CollectionType {
     EndDate: Attribute.Date;
     StartTime: Attribute.Time;
     EndTime: Attribute.Time;
+    images: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

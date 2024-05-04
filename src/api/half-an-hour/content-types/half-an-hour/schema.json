@@ -74,6 +74,13 @@
     },
     "EndTime": {
       "type": "time"
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
